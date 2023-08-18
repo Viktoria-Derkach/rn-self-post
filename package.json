@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
     "expo": "~49.0.5",
     "expo-app-loading": "^2.1.1",
     "expo-font": "^11.4.0",
@@ -20,6 +21,7 @@
     "react-native-screens": "^3.23.0",
     "react-native-web": "^0.19.7",
     "react-navigation": "^4.4.4",
+    "react-navigation-header-buttons": "^11.0.0",
     "react-navigation-stack": "^2.10.4"
   },
   "devDependencies": {

@@ -13,7 +13,7 @@ export const Post = ({ post, onOpen }) => {
       </View>
     </TouchableOpacity>
   );
-};
+}
 
 const styles = StyleSheet.create({
   post: {

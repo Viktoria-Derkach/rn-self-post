@@ -7,6 +7,8 @@ import { Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { MainScreen } from '../screens/MainScreen';
 import { PostScreen } from '../screens/PostScreen';
+import { AboutScreen } from '../screens/AboutScreen';
+import { CreateScreen } from '../screens/CreateScreen';
 import { BookedScreen } from '../screens/BookedScreen';
 import { THEME } from '../theme';
 
@@ -48,6 +50,21 @@ const bottomTabsConfig = {
     navigationOptions: {
       tabBarLabel: 'Избранное',
       tabBarIcon: info => <Ionicons name="ios-star" size={25} color={info.tintColor} />,
+    },
+  },
+  About: {
+    screen: AboutScreen,
+    navigationOptions: {
+      tabBarLabel: 'about',
+      tabBarIcon: info => <Ionicons name="tennisball" size={25} color={info.tintColor} />,
+    },
+  },
+
+  Create: {
+    screen: CreateScreen,
+    navigationOptions: {
+      tabBarLabel: 'create',
+      tabBarIcon: info => <Ionicons name="ribbon" size={25} color={info.tintColor} />,
     },
   },
 };

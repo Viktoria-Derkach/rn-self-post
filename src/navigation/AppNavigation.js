@@ -37,6 +37,20 @@ const BookedNavigator = createStackNavigator(
   navigatorOptions
 );
 
+const AboutNavigator = createStackNavigator(
+  {
+    About: AboutScreen,
+  },
+  navigatorOptions
+);
+
+const CreateNavigator = createStackNavigator(
+  {
+    Create: CreateScreen,
+  },
+  navigatorOptions
+);
+
 const bottomTabsConfig = {
   Post: {
     screen: PostNavigator,
@@ -53,7 +67,7 @@ const bottomTabsConfig = {
     },
   },
   About: {
-    screen: AboutScreen,
+    screen: AboutNavigator,
     navigationOptions: {
       tabBarLabel: 'about',
       tabBarIcon: info => <Ionicons name="tennisball" size={25} color={info.tintColor} />,
@@ -61,7 +75,7 @@ const bottomTabsConfig = {
   },
 
   Create: {
-    screen: CreateScreen,
+    screen: CreateNavigator,
     navigationOptions: {
       tabBarLabel: 'create',
       tabBarIcon: info => <Ionicons name="ribbon" size={25} color={info.tintColor} />,

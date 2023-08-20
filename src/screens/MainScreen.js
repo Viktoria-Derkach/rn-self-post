@@ -16,16 +16,16 @@ export const MainScreen = ({ navigation }) => {
   return <PostList data={DATA} onOpen={openPostHandler} />;
 }
 
-MainScreen.navigationOptions = {
+MainScreen.navigationOptions = ({ navigation }) => ({
   headerTitle: 'Мой блог',
   headerRight: (
     <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
-      <Item title="Take photo" iconName="ios-camera" onPress={() => console.log('Press photo')} />
+      <Item title="Take photo" iconName="ios-camera" onPress={() => navigation.push('Create')} />
     </HeaderButtons>
   ),
-  headerLeft: (
-    <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
-      <Item title="Toggle Drawer" iconName="ios-menu" onPress={() => console.log('Press photo')} />
-    </HeaderButtons>
-  ),
-};
+  // headerLeft: (
+  //   <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
+  //     <Item title="Toggle Drawer" iconName="ios-menu" onPress={() => console.log('Press photo')} />
+  //   </HeaderButtons>
+  // ),
+});

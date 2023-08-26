@@ -11,11 +11,24 @@
       "resizeMode": "cover",
       "backgroundColor": "#242832"
     },
-    "assetBundlePatterns": ["**/*"],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vikadev.self_blog_rm_app",
+      "buildNumber": "1.0.0"
     },
     "android": {
+      "package": "com.vikadev.self_blog_rm_app",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
       "icon": "./assets/rn-icon.png",
       "userInterfaceStyle": "light",
       "splash": {
@@ -30,6 +43,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "02f0163a-b550-4718-bfb8-b0f1874bd77d"
+      }
     }
   }
 }

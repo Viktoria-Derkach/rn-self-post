@@ -41,17 +41,17 @@ export const CreateScreen = ({ navigation }) => {
     <ScrollView>
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View style={styles.wrapper}>
-          <Text style={styles.title}>Создай новый пост</Text>
+          <Text style={styles.title}>Create new post</Text>
           <TextInput
             style={styles.textarea}
-            placeholder="Введите текст заметки"
+            placeholder="Enter the text"
             value={text}
             onChangeText={setText}
             multiline
           />
           <PhotoPicker onPick={photoPickHandler} />
           <Button
-            title="Создать пост"
+            title="СCreate a post"
             color={THEME.MAIN_COLOR}
             onPress={saveHandler}
             disabled={!text}
@@ -63,7 +63,7 @@ export const CreateScreen = ({ navigation }) => {
 };
 
 CreateScreen.navigationOptions = ({ navigation }) => ({
-  headerTitle: 'Создать пост',
+  headerTitle: 'Create a post',
   headerLeft: (
     <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
       <Item title="Toggle Drawer" iconName="ios-menu" onPress={() => navigation.toggleDrawer()} />

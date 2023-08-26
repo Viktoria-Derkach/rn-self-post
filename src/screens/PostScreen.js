@@ -28,15 +28,15 @@ export const PostScreen = ({ navigation }) => {
 
   const removeHandler = () => {
     Alert.alert(
-      'Удаление поста',
-      'Вы точно хотите удалить пост?',
+      'Delete a post',
+      'Do you want to delete a post?',
       [
         {
-          text: 'Отменить',
+          text: 'Cancel',
           style: 'cancel',
         },
         {
-          text: 'Удалить',
+          text: 'Delete',
           style: 'destructive',
           onPress() {
             navigation.navigate('Main');
@@ -58,7 +58,7 @@ export const PostScreen = ({ navigation }) => {
       <View style={styles.textWrap}>
         <Text style={styles.title}>{post.text}</Text>
       </View>
-      <Button title="Удалить" color={THEME.DANGER_COLOR} onPress={removeHandler} />
+      <Button title="Delete" color={THEME.DANGER_COLOR} onPress={removeHandler} />
     </ScrollView>
   );
 };
@@ -69,7 +69,7 @@ PostScreen.navigationOptions = ({ navigation }) => {
   const toggleHandler = navigation.getParam('toggleHandler');
   const iconName = booked ? 'ios-star' : 'ios-star-outline';
   return {
-    headerTitle: 'Пост от ' + new Date(date).toLocaleDateString(),
+    headerTitle: 'Post date ' + new Date(date).toLocaleDateString(),
     headerRight: (
       <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
         <Item title="Take photo" iconName={iconName} onPress={toggleHandler} />

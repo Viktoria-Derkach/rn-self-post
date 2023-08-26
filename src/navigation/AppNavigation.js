@@ -62,7 +62,7 @@ const bottomTabsConfig = {
   Booked: {
     screen: BookedNavigator,
     navigationOptions: {
-      tabBarLabel: 'Избранное',
+      tabBarLabel: 'Stared',
       tabBarIcon: info => <Ionicons name="ios-star" size={25} color={info.tintColor} />,
     },
   },
